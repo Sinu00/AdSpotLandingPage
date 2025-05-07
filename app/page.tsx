@@ -28,7 +28,7 @@ export default function Home() {
               <Button asChild size="lg" className="bg-gold-500 hover:bg-gold-600">
                 <Link href="/contact">Book Consultation</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-gray-900">
                 <Link href="/portfolio">View Portfolio</Link>
               </Button>
             </div>
