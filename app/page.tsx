@@ -183,55 +183,77 @@ export default function Home() {
       </section>
 
       {/* Contact Preview */}
-      <section className="w-full bg-white py-16">
+      <section className="relative w-full bg-white py-24 overflow-hidden">
         <div className="container px-4">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div>
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Us</h2>
-              <p className="mt-4 text-lg text-gray-600">
-                Ready to start planning your event? Get in touch with our team.
-              </p>
-              <div className="mt-8 space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-100">
-                    <Phone className="h-5 w-5 text-gold-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">Phone</h3>
-                    <p className="mt-1 text-gray-600">+91 7736353636</p>
-                    <p className="text-gray-600">+91 8907488000</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-100">
-                    <Mail className="h-5 w-5 text-gold-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">Email</h3>
-                    <p className="mt-1 text-gray-600">info@adspotevent.com</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-100">
-                    <MapPin className="h-5 w-5 text-gold-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold">Location</h3>
-                    <p className="mt-1 text-gray-600">Kasaragod, Kerala, India</p>
-                  </div>
-                </div>
+          <div className="grid gap-16 lg:grid-cols-2">
+            <div className="relative z-10">
+              <div className="max-w-xl">
+                <h2 className="font-serif text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                  Let's Create Your Perfect Event
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                  Ready to start planning your special day? Our team is here to turn your vision into reality. Get in touch with us today.
+                </p>
               </div>
-              <div className="mt-8">
-                <Button asChild size="lg" className="bg-gold-500 hover:bg-gold-600">
-                  <Link href="/contact">Contact Us</Link>
-                </Button>
+              <div className="mt-12">
+                <dl className="space-y-8">
+                  <div className="flex gap-6">
+                    <dt>
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100">
+                        <Phone className="h-6 w-6 text-gold-600" />
+                      </div>
+                    </dt>
+                    <dd>
+                      <h3 className="text-xl font-semibold text-gray-900">Phone</h3>
+                      <p className="mt-2 text-base leading-7 text-gray-600">+91 7736353636</p>
+                      <p className="text-base leading-7 text-gray-600">+91 8907488000</p>
+                    </dd>
+                  </div>
+                  <div className="flex gap-6">
+                    <dt>
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100">
+                        <Mail className="h-6 w-6 text-gold-600" />
+                      </div>
+                    </dt>
+                    <dd>
+                      <h3 className="text-xl font-semibold text-gray-900">Email</h3>
+                      <p className="mt-2 text-base leading-7 text-gray-600">info@adspotevent.com</p>
+                    </dd>
+                  </div>
+                  <div className="flex gap-6">
+                    <dt>
+                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100">
+                        <MapPin className="h-6 w-6 text-gold-600" />
+                      </div>
+                    </dt>
+                    <dd>
+                      <h3 className="text-xl font-semibold text-gray-900">Location</h3>
+                      <p className="mt-2 text-base leading-7 text-gray-600">Kasaragod, Kerala, India</p>
+                    </dd>
+                  </div>
+                </dl>
+                <div className="mt-10">
+                  <Button asChild size="lg" className="bg-gold-500 hover:bg-gold-600 px-8">
+                    <Link href="/contact">Get in Touch</Link>
+                  </Button>
+                </div>
               </div>
             </div>
-            <div className="relative h-[400px] overflow-hidden rounded-lg shadow-lg">
-              <Image src="/images/contact.jpg" alt="Contact us" fill className="object-cover" />
+            <div className="relative">
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gray-50">
+                <Image 
+                  src="/images/contact.jpg" 
+                  alt="Contact us" 
+                  fill 
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+              </div>
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
             </div>
           </div>
         </div>
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white"></div>
       </section>
 
       {/* Instagram Feed Preview */}
