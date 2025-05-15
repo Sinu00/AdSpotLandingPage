@@ -1,6 +1,8 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronRight, Mail, MapPin, Phone } from "lucide-react"
+import { ChevronRight, Mail, MapPin, Phone, Heart, Building2, Cake, Flower2, Palette, Gift } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -8,6 +10,7 @@ import { HeroCarousel } from "@/components/hero-carousel"
 import { ServiceCard } from "@/components/service-card"
 import { TestimonialCarousel } from "@/components/testimonial-carousel"
 import { QuoteCalculator } from "@/components/quote-calculator"
+import { InstagramFeed } from "@/components/instagram-feed"
 
 export default function Home() {
   return (
@@ -49,44 +52,44 @@ export default function Home() {
             <ServiceCard
               title="Wedding Planning & Decoration"
               description="Transform your wedding day with our exquisite decorations and flawless planning services."
-              icon="/images/wedding-icon.png"
+              icon={Heart}
               image="/images/wedding.jpg"
-              href="/services/wedding"
+              href="/services#wedding"
             />
             <ServiceCard
               title="Corporate Events"
               description="Elevate your corporate events with professional planning and sophisticated decor."
-              icon="/images/corporate-icon.png"
+              icon={Building2}
               image="/images/corporate.jpg"
-              href="/services/corporate"
+              href="/services#corporate"
             />
             <ServiceCard
               title="Birthday Celebrations"
               description="Create memorable birthday celebrations with our creative themes and decorations."
-              icon="/images/birthday-icon.png"
+              icon={Cake}
               image="/images/birthday.jpg"
-              href="/services/birthday"
+              href="/services#birthday"
             />
             <ServiceCard
               title="Floral Arrangements"
               description="Beautiful custom floral designs to enhance any event or special occasion."
-              icon="/images/floral-icon.png"
+              icon={Flower2}
               image="/images/floral.jpg"
-              href="/services/floral"
+              href="/services#floral"
             />
             <ServiceCard
               title="Custom Craft Items"
               description="Unique handcrafted items and personalized decor elements for your events."
-              icon="/images/craft-icon.png"
+              icon={Palette}
               image="/images/craft.jpg"
-              href="/services/craft"
+              href="/services#craft"
             />
             <ServiceCard
               title="Luxury Hampers"
               description="Exquisite gift hampers for corporate events, weddings, and special occasions."
-              icon="/images/hamper-icon.png"
+              icon={Gift}
               image="/images/hamper.jpg"
-              href="/services/hampers"
+              href="/services#hampers"
             />
           </div>
           <div className="mt-12 text-center">
@@ -120,7 +123,7 @@ export default function Home() {
             ].map((item, index) => (
               <Link
                 key={index}
-                href={`/portfolio/${item.category.toLowerCase()}`}
+                href={`/portfolio#${item.category.toLowerCase()}`}
                 className="group overflow-hidden rounded-lg shadow-md transition-all hover:shadow-xl"
               >
                 <div className="relative aspect-square overflow-hidden">
@@ -183,77 +186,51 @@ export default function Home() {
       </section>
 
       {/* Contact Preview */}
-      <section className="relative w-full bg-white py-24 overflow-hidden">
+      <section className="w-full bg-white py-16">
         <div className="container px-4">
-          <div className="grid gap-16 lg:grid-cols-2">
-            <div className="relative z-10">
-              <div className="max-w-xl">
-                <h2 className="font-serif text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                  Let's Create Your Perfect Event
-                </h2>
-                <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Ready to start planning your special day? Our team is here to turn your vision into reality. Get in touch with us today.
-                </p>
-              </div>
-              <div className="mt-12">
-                <dl className="space-y-8">
-                  <div className="flex gap-6">
-                    <dt>
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100">
-                        <Phone className="h-6 w-6 text-gold-600" />
-                      </div>
-                    </dt>
-                    <dd>
-                      <h3 className="text-xl font-semibold text-gray-900">Phone</h3>
-                      <p className="mt-2 text-base leading-7 text-gray-600">+91 7736353636</p>
-                      <p className="text-base leading-7 text-gray-600">+91 8907488000</p>
-                    </dd>
-                  </div>
-                  <div className="flex gap-6">
-                    <dt>
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100">
-                        <Mail className="h-6 w-6 text-gold-600" />
-                      </div>
-                    </dt>
-                    <dd>
-                      <h3 className="text-xl font-semibold text-gray-900">Email</h3>
-                      <p className="mt-2 text-base leading-7 text-gray-600">info@adspotevent.com</p>
-                    </dd>
-                  </div>
-                  <div className="flex gap-6">
-                    <dt>
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-100">
-                        <MapPin className="h-6 w-6 text-gold-600" />
-                      </div>
-                    </dt>
-                    <dd>
-                      <h3 className="text-xl font-semibold text-gray-900">Location</h3>
-                      <p className="mt-2 text-base leading-7 text-gray-600">Kasaragod, Kerala, India</p>
-                    </dd>
-                  </div>
-                </dl>
-                <div className="mt-10">
-                  <Button asChild size="lg" className="bg-gold-500 hover:bg-gold-600 px-8">
-                    <Link href="/contact">Get in Touch</Link>
-                  </Button>
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="relative overflow-hidden rounded-lg">
+              <Image
+                src="/images/contact.jpg"
+                alt="Contact us"
+                width={800}
+                height={500}
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20" />
+            </div>
+            <div className="flex flex-col justify-center">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Let&apos;s Create Something Special
+              </h2>
+              <p className="mt-4 text-lg text-gray-600">
+                Ready to start planning your perfect event? Get in touch with us today and let&apos;s bring your vision to life.
+              </p>
+              <div className="mt-8 space-y-4">
+                <div className="flex items-center gap-3">
+                  <Phone className="h-5 w-5 text-gold-500" />
+                  <span className="text-gray-600">+91 1234567890</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail className="h-5 w-5 text-gold-500" />
+                  <span className="text-gray-600">contact@adspotevent.com</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <MapPin className="h-5 w-5 text-gold-500" />
+                  <span className="text-gray-600">Kasaragod, Kerala, India</span>
                 </div>
               </div>
-            </div>
-            <div className="relative">
-              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gray-50">
-                <Image 
-                  src="/images/contact.jpg" 
-                  alt="Contact us" 
-                  fill 
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  priority
-                />
+              <div className="mt-8">
+                <Button asChild className="gap-2 bg-gold-500 hover:bg-gold-600">
+                  <Link href="/contact">
+                    Contact Us
+                    <ChevronRight className="h-4 w-4" />
+                  </Link>
+                </Button>
               </div>
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
             </div>
           </div>
         </div>
-        <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white"></div>
       </section>
 
       {/* Instagram Feed Preview */}
@@ -267,97 +244,11 @@ export default function Home() {
               Stay updated with our latest events and decorations.
             </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {[1, 2, 3, 4].map((item) => (
-              <Link
-                key={item}
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group overflow-hidden rounded-lg"
-              >
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src={`/images/instagram-${item}.jpg`}
-                    alt="Instagram post"
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/20" />
-                </div>
-              </Link>
-            ))}
-          </div>
+          <InstagramFeed />
           <div className="mt-8 text-center">
             <Button asChild variant="outline" className="gap-2">
-              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.instagram.com/adspot_event?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
                 View Instagram
-                <ChevronRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Preview */}
-      <section className="w-full bg-white py-16">
-        <div className="container px-4">
-          <div className="mb-12 text-center">
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Event Inspiration
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Discover the latest trends and ideas for your events.
-            </p>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "2024 Wedding Trends",
-                excerpt: "Discover the hottest wedding decoration trends for 2024.",
-                image: "/images/blog-wedding.jpg",
-                date: "May 2, 2024",
-              },
-              {
-                title: "Corporate Event Planning Guide",
-                excerpt: "Essential tips for planning successful corporate events.",
-                image: "/images/blog-corporate.jpg",
-                date: "April 18, 2024",
-              },
-              {
-                title: "Creative Birthday Themes",
-                excerpt: "Unique birthday celebration ideas for all ages.",
-                image: "/images/blog-birthday.jpg",
-                date: "April 5, 2024",
-              },
-            ].map((post, index) => (
-              <Card key={index} className="overflow-hidden">
-                <div className="relative aspect-video overflow-hidden">
-                  <Image
-                    src={post.image || "/placeholder.svg"}
-                    alt={post.title}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <p className="text-sm text-gray-500">{post.date}</p>
-                  <h3 className="mt-2 text-xl font-bold">{post.title}</h3>
-                  <p className="mt-2 text-gray-600">{post.excerpt}</p>
-                  <Button asChild variant="link" className="mt-4 px-0">
-                    <Link href="/blog">
-                      Read More
-                      <ChevronRight className="ml-1 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          <div className="mt-12 text-center">
-            <Button asChild variant="outline" className="gap-2">
-              <Link href="/blog">
-                View All Articles
                 <ChevronRight className="h-4 w-4" />
               </Link>
             </Button>

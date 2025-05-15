@@ -12,8 +12,6 @@ const navigation = [
   { name: "Services", href: "/services" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "About", href: "/about" },
-  { name: "Blog", href: "/blog" },
-  { name: "Shop", href: "/shop" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -23,19 +21,38 @@ export function Header() {
   const pathname = usePathname()
 
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10)
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
+
+      timeoutId = setTimeout(() => {
+        const shouldBeScrolled = window.scrollY > 50
+        if (shouldBeScrolled !== scrolled) {
+          setScrolled(shouldBeScrolled)
+        }
+      }, 50)
     }
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    // Check initial scroll position
+    handleScroll()
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+      }
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [scrolled])
 
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled ? "bg-white shadow-md" : "bg-transparent",
+        scrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-transparent",
       )}
     >
       <nav className="container flex items-center justify-between px-4 py-4">

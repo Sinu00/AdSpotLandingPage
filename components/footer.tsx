@@ -17,6 +17,15 @@ export function Footer() {
             </p>
             <div className="mt-6 flex space-x-4">
               <Link
+                href="https://www.instagram.com/adspot_event?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-400 transition-colors hover:bg-gold-500 hover:text-white"
+              >
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
+              </Link>
+              <Link
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -24,15 +33,6 @@ export function Footer() {
               >
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
-              </Link>
-              <Link
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-400 transition-colors hover:bg-gold-500 hover:text-white"
-              >
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
               </Link>
               <Link
                 href="https://twitter.com"
@@ -62,16 +62,6 @@ export function Footer() {
               <li>
                 <Link href="/about" className="text-gray-400 transition-colors hover:text-gold-500">
                   About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-400 transition-colors hover:text-gold-500">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/shop" className="text-gray-400 transition-colors hover:text-gold-500">
-                  Shop
                 </Link>
               </li>
               <li>

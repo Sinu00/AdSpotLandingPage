@@ -8,35 +8,35 @@ import { Star } from "lucide-react"
 
 const testimonials = [
   {
-    name: "Priya & Rahul",
-    role: "Wedding Clients",
-    content:
-      "AdSpot Event transformed our wedding into a magical experience. The floral mandap was beyond our expectations, and every detail was perfect. Highly recommend their services!",
-    avatar: "/images/testimonial-1.jpg",
-    rating: 5,
-  },
-  {
-    name: "Technovate Solutions",
+    name: "Muhammed Sinan",
     role: "Corporate Client",
     content:
       "We hired AdSpot Event for our annual corporate event, and they delivered exceptional service. The decor was sophisticated, and the team was professional throughout the planning process.",
-    avatar: "/images/testimonial-2.jpg",
+    avatar: "/images/testimonial/sinu.jpg",
     rating: 5,
   },
   {
-    name: "Meera Shah",
+    name: "Mariyam Shahana",
+    role: "Wedding Clients",
+    content:
+      "AdSpot Event transformed our wedding into a magical experience. The floral mandap was beyond our expectations, and every detail was perfect. Highly recommend their services!",
+    avatar: "/images/testimonial/shana.jpg",
+    rating: 5,
+  },
+  {
+    name: "Shiza",
     role: "Birthday Celebration",
     content:
-      "The themed birthday party they arranged for my daughter was incredible! The decorations were creative and colorful, exactly what we wanted. Will definitely use their services again.",
-    avatar: "/images/testimonial-3.jpg",
+      "The themed birthday party they arranged for my sister was incredible! The decorations were creative and colorful, exactly what we wanted. Will definitely use their services again.",
+    avatar: "/images/testimonial/shiza.jpg",
     rating: 5,
   },
   {
-    name: "Arjun & Divya",
+    name: "Marzook",
     role: "Wedding Clients",
     content:
       "Working with AdSpot Event was a dream. They understood our vision perfectly and created a stunning wedding setup that our guests are still talking about months later.",
-    avatar: "/images/testimonial-4.jpg",
+    avatar: "/images/testimonial/majju.png",
     rating: 5,
   },
 ]

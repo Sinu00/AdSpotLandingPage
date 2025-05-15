@@ -1,17 +1,19 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronRight } from "lucide-react"
+import { LucideIcon, ChevronRight } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 interface ServiceCardProps {
   title: string
   description: string
-  icon: string
+  icon: LucideIcon
   image: string
   href: string
 }
 
-export function ServiceCard({ title, description, icon, image, href }: ServiceCardProps) {
+export function ServiceCard({ title, description, icon: Icon, image, href }: ServiceCardProps) {
   return (
     <Card className="group overflow-hidden transition-all hover:shadow-lg">
       <div className="relative aspect-video overflow-hidden">
@@ -24,8 +26,8 @@ export function ServiceCard({ title, description, icon, image, href }: ServiceCa
       </div>
       <CardContent className="p-6">
         <div className="mb-4 flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold-100">
-            <Image src={icon || "/placeholder.svg"} alt="" width={24} height={24} />
+          <div className="rounded-full bg-gold-50 p-2">
+            <Icon className="h-5 w-5 text-gold-500" />
           </div>
           <h3 className="text-xl font-bold">{title}</h3>
         </div>
