@@ -26,7 +26,7 @@ export function Footer() {
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/adspot.kasaragod/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-400 transition-colors hover:bg-gold-500 hover:text-white"
@@ -84,7 +84,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />
-                <p className="text-gray-400">info@adspotevent.com</p>
+                <p className="text-gray-400">adspotadvt@gmail.com</p>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="mt-1 h-5 w-5 flex-shrink-0 text-gold-500" />

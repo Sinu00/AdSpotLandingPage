@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative w-full">
+      <section className="relative w-full" aria-label="AdSpot Event - Premium Event Planning Services in Kasaragod">
         <HeroCarousel />
         <div className="absolute inset-0 flex items-center justify-center bg-black/40">
           <div className="container px-4 text-center">
@@ -25,7 +25,7 @@ export default function Home() {
               <span className="block text-gold-400">Moments</span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white">
-              Premium event planning and decoration services in Kasaragod
+              AdSpot Event - Kasaragod's Premier Event Planning & Decoration Services
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="bg-gold-500 hover:bg-gold-600">
@@ -40,53 +40,55 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="w-full bg-white py-16">
+      <section className="w-full bg-white py-16" aria-label="AdSpot Event Services in Kasaragod">
         <div className="container px-4">
           <div className="mb-12 text-center">
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Services</h2>
+            <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              AdSpot Event Services - Kasaragod's Leading Event Planning Company
+            </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              We offer a wide range of event planning and decoration services to make your special day unforgettable.
+              AdSpot Event offers comprehensive event planning and decoration services in Kasaragod, Kerala. From weddings to corporate events, we make every occasion unforgettable.
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <ServiceCard
-              title="Wedding Planning & Decoration"
-              description="Transform your wedding day with our exquisite decorations and flawless planning services."
+              title="Wedding Planning & Decoration in Kasaragod"
+              description="AdSpot Event specializes in wedding planning and decoration services in Kasaragod. Transform your wedding day with our exquisite decorations and flawless planning services."
               icon={Heart}
               image="/images/wedding.jpg"
               href="/services#wedding"
             />
             <ServiceCard
-              title="Corporate Events"
-              description="Elevate your corporate events with professional planning and sophisticated decor."
+              title="Corporate Events in Kasaragod"
+              description="AdSpot Event provides professional corporate event planning and decoration services in Kasaragod. Elevate your corporate events with sophisticated decor."
               icon={Building2}
               image="/images/corporate.jpg"
               href="/services#corporate"
             />
             <ServiceCard
-              title="Birthday Celebrations"
-              description="Create memorable birthday celebrations with our creative themes and decorations."
+              title="Birthday Celebrations in Kasaragod"
+              description="AdSpot Event creates magical birthday celebrations in Kasaragod with creative themes and stunning decorations for all ages."
               icon={Cake}
               image="/images/birthday.jpg"
               href="/services#birthday"
             />
             <ServiceCard
-              title="Floral Arrangements"
-              description="Beautiful custom floral designs to enhance any event or special occasion."
+              title="Floral Arrangements in Kasaragod"
+              description="AdSpot Event offers beautiful custom floral designs in Kasaragod to enhance any event or special occasion with exquisite arrangements."
               icon={Flower2}
               image="/images/floral.jpg"
               href="/services#floral"
             />
             <ServiceCard
-              title="Custom Craft Items"
-              description="Unique handcrafted items and personalized decor elements for your events."
+              title="Custom Craft Items in Kasaragod"
+              description="AdSpot Event provides unique handcrafted items and personalized decor elements for your events in Kasaragod, Kerala."
               icon={Palette}
               image="/images/craft.jpg"
               href="/services#craft"
             />
             <ServiceCard
-              title="Luxury Hampers"
-              description="Exquisite gift hampers for corporate events, weddings, and special occasions."
+              title="Luxury Hampers in Kasaragod"
+              description="AdSpot Event curates exquisite gift hampers in Kasaragod for corporate events, weddings, and special occasions."
               icon={Gift}
               image="/images/hamper.jpg"
               href="/services#hampers"
@@ -95,7 +97,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Button asChild variant="outline" className="gap-2">
               <Link href="/services">
-                View All Services
+                View All AdSpot Event Services
                 <ChevronRight className="h-4 w-4" />
               </Link>
             </Button>
@@ -104,12 +106,14 @@ export default function Home() {
       </section>
 
       {/* Portfolio Preview */}
-      <section className="w-full bg-gray-50 py-16">
+      <section className="w-full bg-gray-50 py-16" aria-label="AdSpot Event Portfolio - Kasaragod Event Planning">
         <div className="container px-4">
           <div className="mb-12 text-center">
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Portfolio</h2>
+            <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              AdSpot Event Portfolio - Kasaragod Event Planning Excellence
+            </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Explore our recent work and get inspired for your next event.
+              Explore AdSpot Event's recent work in Kasaragod and get inspired for your next event. Our portfolio showcases our expertise in event planning and decoration.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -125,11 +129,12 @@ export default function Home() {
                 key={index}
                 href={`/portfolio#${item.category.toLowerCase()}`}
                 className="group overflow-hidden rounded-lg shadow-md transition-all hover:shadow-xl"
+                aria-label={`View ${item.category} events by AdSpot Event in Kasaragod`}
               >
                 <div className="relative aspect-square overflow-hidden">
                   <Image
                     src={item.image || "/placeholder.svg"}
-                    alt={`${item.category} decoration`}
+                    alt={`${item.category} decoration by AdSpot Event in Kasaragod`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -145,7 +150,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Button asChild className="gap-2 bg-gold-500 hover:bg-gold-600">
               <Link href="/portfolio">
-                View Full Portfolio
+                View Full AdSpot Event Portfolio
                 <ChevronRight className="h-4 w-4" />
               </Link>
             </Button>
@@ -154,14 +159,14 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="w-full bg-white py-16">
+      <section className="w-full bg-white py-16" aria-label="AdSpot Event Client Testimonials - Kasaragod">
         <div className="container px-4">
           <div className="mb-12 text-center">
             <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Client Testimonials
+              AdSpot Event Client Testimonials - Kasaragod
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Hear what our clients have to say about their experience with AdSpot Event.
+              Hear what our clients in Kasaragod have to say about their experience with AdSpot Event's event planning and decoration services.
             </p>
           </div>
           <TestimonialCarousel />
@@ -169,14 +174,14 @@ export default function Home() {
       </section>
 
       {/* Quote Calculator */}
-      <section className="w-full bg-gray-50 py-16">
+      <section className="w-full bg-gray-50 py-16" aria-label="AdSpot Event Quote Calculator - Kasaragod">
         <div className="container px-4">
           <div className="mb-12 text-center">
             <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Get a Quick Quote
+              Get a Quick Quote from AdSpot Event - Kasaragod
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Use our calculator to get an estimate for your event.
+              Use our calculator to get an estimate for your event planning and decoration services in Kasaragod.
             </p>
           </div>
           <div className="mx-auto max-w-3xl">
@@ -186,13 +191,13 @@ export default function Home() {
       </section>
 
       {/* Contact Preview */}
-      <section className="w-full bg-white py-16">
+      <section className="w-full bg-white py-16" aria-label="Contact AdSpot Event - Kasaragod Event Planning">
         <div className="container px-4">
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="relative overflow-hidden rounded-lg">
               <Image
                 src="/images/contact.jpg"
-                alt="Contact us"
+                alt="Contact AdSpot Event - Kasaragod Event Planning Services"
                 width={800}
                 height={500}
                 className="object-cover"
@@ -201,15 +206,15 @@ export default function Home() {
             </div>
             <div className="flex flex-col justify-center">
               <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Let&apos;s Create Something Special
+                Let's Create Something Special with AdSpot Event
               </h2>
               <p className="mt-4 text-lg text-gray-600">
-                Ready to start planning your perfect event? Get in touch with us today and let&apos;s bring your vision to life.
+                Ready to start planning your perfect event in Kasaragod? Contact AdSpot Event today and let's bring your vision to life with our expert event planning and decoration services.
               </p>
               <div className="mt-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-gold-500" />
-                  <span className="text-gray-600">+91 1234567890</span>
+                  <span className="text-gray-600">+91 7736353636</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-gold-500" />
@@ -217,13 +222,13 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-gold-500" />
-                  <span className="text-gray-600">Kasaragod, Kerala, India</span>
+                  <span className="text-gray-600">AdSpot Event, Kasaragod, Kerala, India</span>
                 </div>
               </div>
               <div className="mt-8">
                 <Button asChild className="gap-2 bg-gold-500 hover:bg-gold-600">
                   <Link href="/contact">
-                    Contact Us
+                    Contact AdSpot Event
                     <ChevronRight className="h-4 w-4" />
                   </Link>
                 </Button>
@@ -234,21 +239,21 @@ export default function Home() {
       </section>
 
       {/* Instagram Feed Preview */}
-      <section className="w-full bg-gray-50 py-16">
+      <section className="w-full bg-gray-50 py-16" aria-label="AdSpot Event Instagram - Kasaragod Event Planning">
         <div className="container px-4">
           <div className="mb-12 text-center">
             <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Follow Us on Instagram
+              Follow AdSpot Event on Instagram
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Stay updated with our latest events and decorations.
+              Stay updated with AdSpot Event's latest events and decorations in Kasaragod, Kerala.
             </p>
           </div>
           <InstagramFeed />
           <div className="mt-8 text-center">
             <Button asChild variant="outline" className="gap-2">
               <Link href="https://www.instagram.com/adspot_event?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
-                View Instagram
+                View AdSpot Event Instagram
                 <ChevronRight className="h-4 w-4" />
               </Link>
             </Button>

@@ -1,0 +1,27 @@
+{
+  "name": "AdSpot Event - Premium Event Planning & Decoration Services in Kasaragod",
+  "short_name": "AdSpot Event",
+  "description": "AdSpot Event is Kasaragod's leading event planning and decoration company. We specialize in weddings, corporate events, birthday celebrations, floral arrangements, and luxury hampers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["business", "lifestyle", "events"],
+  "lang": "en",
+  "dir": "ltr"
+} 
