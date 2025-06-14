@@ -28,10 +28,10 @@ export default function Home() {
               AdSpot Event - Kasaragod's Premier Event Planning & Decoration Services
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-gold-500 hover:bg-gold-600">
+              <Button asChild size="lg" className="w-full sm:w-auto bg-gold-500 hover:bg-gold-600">
                 <Link href="/contact">Book Consultation</Link>
               </Button>
-              <Button asChild size="lg" className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-gray-900">
+              <Button asChild size="lg" className="w-full sm:w-auto border-2 border-white bg-transparent text-white hover:bg-white hover:text-gray-900">
                 <Link href="/portfolio">View Portfolio</Link>
               </Button>
             </div>
