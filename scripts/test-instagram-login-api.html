@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Login API Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background: #f5f5f5; }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+        button { padding: 12px 24px; background: #E4405F; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .result { margin-top: 20px; padding: 15px; border-radius: 5px; }
+        .success { background: #f0fff0; border-left: 4px solid #44ff44; }
+        .error { background: #fff0f0; border-left: 4px solid #ff4444; }
+        .info { background: #f0f8ff; border-left: 4px solid #E4405F; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Instagram Login API Test</h1>
+        
+        <div class="info result">
+            <h3>✨ Instagram Login API (Simpler Approach)</h3>
+            <p>This tests the <strong>Instagram Login API</strong> - the simpler approach that works with any Instagram account (Business or Personal).</p>
+            <p><strong>No Facebook page required!</strong></p>
+        </div>
+        
+        <input type="text" id="token" placeholder="Paste your Instagram access token here" />
+        <button onclick="testInstagramLogin()">Test Instagram Login API</button>
+        
+        <div id="result"></div>
+    </div>
+    
+    <script>
+        async function testInstagramLogin() {
+            const token = document.getElementById('token').value.trim();
+            const result = document.getElementById('result');
+            
+            if (!token) {
+                result.innerHTML = '<div class="result error">Please enter your access token!</div>';
+                return;
+            }
+            
+            result.innerHTML = `
+                <div class="result info">
+                    <h3>🔍 Testing Instagram Login API...</h3>
+                    <p><strong>Token length:</strong> ${token.length} characters</p>
+                    <p><strong>Testing endpoint:</strong> https://graph.instagram.com/me</p>
+                </div>
+            `;
+            
+            try {
+                // Step 1: Get user info using Instagram Login API
+                const userResponse = await fetch(
+                    `https://graph.instagram.com/me?fields=user_id,username,account_type,name,profile_picture_url,followers_count,follows_count,media_count&access_token=${token}`
+                );
+                const userData = await userResponse.json();
+                
+                if (userData.error) {
+                    result.innerHTML += `
+                        <div class="result error">
+                            <h3>❌ Instagram Login API Error:</h3>
+                            <p><strong>Error:</strong> ${userData.error.message}</p>
+                            <p><strong>Type:</strong> ${userData.error.type}</p>
+                            <p><strong>Code:</strong> ${userData.error.code}</p>
+                            
+                            <h4>🔧 Common solutions:</h4>
+                            <ul>
+                                <li>Make sure you're using <strong>Instagram Login API</strong> (not Facebook Login)</li>
+                                <li>Generate a fresh token from the correct API setup</li>
+                                <li>Your app must be approved for Instagram Login</li>
+                            </ul>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                result.innerHTML += `
+                    <div class="result success">
+                        <h3>✅ Instagram Login API Works!</h3>
+                        <p><strong>User ID:</strong> ${userData.user_id}</p>
+                        <p><strong>Username:</strong> @${userData.username}</p>
+                        <p><strong>Name:</strong> ${userData.name}</p>
+                        <p><strong>Account Type:</strong> ${userData.account_type}</p>
+                        <p><strong>Followers:</strong> ${userData.followers_count}</p>
+                        <p><strong>Media Count:</strong> ${userData.media_count}</p>
+                    </div>
+                `;
+                
+                // Step 2: Test media access
+                result.innerHTML += `
+                    <div class="result info">
+                        <h3>📸 Testing Media Access...</h3>
+                        <p>Getting recent posts...</p>
+                    </div>
+                `;
+                
+                const mediaResponse = await fetch(
+                    `https://graph.instagram.com/${userData.user_id}/media?fields=id,media_type,media_url,permalink,thumbnail_url,timestamp&limit=5&access_token=${token}`
+                );
+                const mediaData = await mediaResponse.json();
+                
+                if (mediaData.error) {
+                    result.innerHTML += `
+                        <div class="result error">
+                            <h3>❌ Media Access Error:</h3>
+                            <p>${mediaData.error.message}</p>
+                        </div>
+                    `;
+                } else {
+                    result.innerHTML += `
+                        <div class="result success">
+                            <h3>🎉 Media Access Works!</h3>
+                            <p><strong>Found:</strong> ${mediaData.data.length} recent posts</p>
+                            
+                            <h4>📋 Recent Posts:</h4>
+                            <ul>
+                                ${mediaData.data.map(post => `
+                                    <li>
+                                        <strong>Type:</strong> ${post.media_type} | 
+                                        <strong>ID:</strong> ${post.id} | 
+                                        <a href="${post.permalink}" target="_blank">View Post</a>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                            
+                            <h4>🎯 Perfect! Add these to your .env.local:</h4>
+                            <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                                <code>INSTAGRAM_ACCESS_TOKEN=${token}</code><br>
+                                <code>INSTAGRAM_USER_ID=${userData.user_id}</code>
+                            </div>
+                            
+                            <h4>🚀 Next Steps:</h4>
+                            <ol>
+                                <li>Create <code>.env.local</code> file with the values above</li>
+                                <li>Start your dev server: <code>npm run dev</code></li>
+                                <li>Your Instagram posts should now appear on your website!</li>
+                            </ol>
+                        </div>
+                    `;
+                }
+                
+            } catch (error) {
+                result.innerHTML += `
+                    <div class="result error">
+                        <h3>❌ Network Error:</h3>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html> 

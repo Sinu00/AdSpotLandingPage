@@ -25,7 +25,7 @@ export default function Home() {
               <span className="block text-gold-400">Moments</span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-xl text-white">
-              AdSpot Event - Kasaragod's Premier Event Planning & Decoration Services
+              ADSPOT EVENT - Kasaragod's Premier Event Planning & Decoration Services
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="w-full sm:w-auto bg-gold-500 hover:bg-gold-600">
@@ -44,10 +44,10 @@ export default function Home() {
         <div className="container px-4">
           <div className="mb-12 text-center">
             <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              AdSpot Event Services - Kasaragod's Leading Event Planning Company
+              Our Services
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              AdSpot Event offers comprehensive event planning and decoration services in Kasaragod, Kerala. From weddings to corporate events, we make every occasion unforgettable.
+            We offer a wide range of event planning and decoration services to make your special day unforgettable.
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -110,10 +110,10 @@ export default function Home() {
         <div className="container px-4">
           <div className="mb-12 text-center">
             <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              AdSpot Event Portfolio - Kasaragod Event Planning Excellence
+              Our Portfolio
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Explore AdSpot Event's recent work in Kasaragod and get inspired for your next event. Our portfolio showcases our expertise in event planning and decoration.
+            Explore our recent work and get inspired for your next event.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -163,10 +163,10 @@ export default function Home() {
         <div className="container px-4">
           <div className="mb-12 text-center">
             <h2 className="font-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              AdSpot Event Client Testimonials - Kasaragod
+              Client Testimonials
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Hear what our clients in Kasaragod have to say about their experience with AdSpot Event's event planning and decoration services.
+            Hear what our clients have to say about their experience with AdSpot Event.
             </p>
           </div>
           <TestimonialCarousel />

@@ -205,9 +205,9 @@ export default function RootLayout({
               "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer", "UPI", "Digital Wallet"],
               "areaServed": [
                 {
-                  "@type": "City",
-                  "name": "Kasaragod"
-                },
+                "@type": "City",
+                "name": "Kasaragod"
+              },
                 {
                   "@type": "State",
                   "name": "Kerala"
