@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -57,15 +58,15 @@ export function Header() {
     >
       <nav className="container flex items-center justify-between px-4 py-4">
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span
-              className={cn(
-                "font-serif text-2xl font-bold transition-colors",
-                scrolled ? "text-gold-600" : "text-white",
-              )}
-            >
-              AdSpot<span className="text-gold-500">Event</span>
-            </span>
+          <Link href="/" className="-m-1 p-1">
+            <Image
+              src="/logo/adspotlogotransparentborder.png"
+              alt="AdSpot Event Logo"
+              width={180}
+              height={60}
+              className="h-12 w-auto transition-all duration-300"
+              priority
+            />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -116,9 +117,14 @@ export function Header() {
             <div className="px-4 sm:px-6">
               <div className="flex items-center justify-between">
                 <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                  <span className="font-serif text-2xl font-bold text-gold-600">
-                    AdSpot<span className="text-gold-500">Event</span>
-                  </span>
+                  <Image
+                    src="/logo/adspotlogotransparentborder.png"
+                    alt="AdSpot Event Logo"
+                    width={160}
+                    height={54}
+                    className="h-10 w-auto"
+                    priority
+                  />
                 </Link>
                 <button
                   type="button"

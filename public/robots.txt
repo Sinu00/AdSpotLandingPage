@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://adspotevent.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Disallow specific paths (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow important pages
+Allow: /
+Allow: /services
+Allow: /portfolio
+Allow: /about
+Allow: /contact
+
+# Host
+Host: https://adspotevent.com 

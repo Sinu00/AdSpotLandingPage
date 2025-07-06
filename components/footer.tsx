@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Instagram, Mail, MapPin, Phone, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -9,9 +10,15 @@ export function Footer() {
       <div className="container px-4 py-12 md:py-16">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h2 className="font-serif text-2xl font-bold">
-              AdSpot<span className="text-gold-500">Event</span>
-            </h2>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/logo/adspotlogo.jpg"
+                alt="AdSpot Event Logo"
+                width={180}
+                height={60}
+                className="h-12 w-auto"
+              />
+            </Link>
             <p className="mt-4 text-gray-400">
               Premium event planning and decoration services in Kasaragod. Making your special moments unforgettable.
             </p>
