@@ -18,11 +18,12 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "AdSpot Event | AdSpot | Premium Event Planning & Decoration Services in Kasaragod",
-    template: "%s | AdSpot Event | AdSpot"
+    default: "ADSPOT EVENT | AdSpot | Premium Event Planning & Decoration Services in Kasaragod",
+    template: "%s | ADSPOT EVENT | AdSpot"
   },
-  description: "AdSpot Event (AdSpot) is Kasaragod's #1 event planning and decoration company. We specialize in weddings, corporate events, birthday celebrations, floral arrangements, and luxury hampers. Transform your special moments into unforgettable experiences with AdSpot.",
+  description: "ADSPOT EVENT (AdSpot) is Kasaragod's #1 event planning and decoration company. We specialize in weddings, corporate events, birthday celebrations, floral arrangements, and luxury hampers. Transform your special moments into unforgettable experiences with AdSpot.",
   keywords: [
+    "ADSPOT EVENT",
     "AdSpot",
     "AdSpot Event",
     "AdSpot Events",
@@ -51,9 +52,9 @@ export const metadata: Metadata = {
     "Kerala Event Planning",
     "Best Event Planner Kasaragod"
   ],
-  authors: [{ name: "AdSpot Event" }],
-  creator: "AdSpot Event",
-  publisher: "AdSpot Event",
+  authors: [{ name: "ADSPOT EVENT" }],
+  creator: "ADSPOT EVENT",
+  publisher: "ADSPOT EVENT",
   formatDetection: {
     email: false,
     address: false,
@@ -67,23 +68,46 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
     url: 'https://adspotevent.com',
-    title: 'AdSpot Event | AdSpot | Premium Event Planning & Decoration Services in Kasaragod',
-    description: 'AdSpot Event (AdSpot) is Kasaragod\'s #1 event planning and decoration company. We specialize in weddings, corporate events, birthday celebrations, floral arrangements, and luxury hampers.',
-    siteName: 'AdSpot Event',
+    title: 'ADSPOT EVENT | AdSpot | Premium Event Planning & Decoration Services in Kasaragod',
+    description: 'ADSPOT EVENT (AdSpot) is Kasaragod\'s #1 event planning and decoration company. We specialize in weddings, corporate events, birthday celebrations, floral arrangements, and luxury hampers.',
+    siteName: 'ADSPOT EVENT',
     images: [
       {
-        url: '/logo/adspotlogo.jpg',
+        url: '/images/portfolio/wedding-1.jpg',
         width: 1200,
         height: 630,
-        alt: 'AdSpot Event - AdSpot Logo - Event Planning & Decoration Services',
+        alt: 'ADSPOT EVENT - Wedding Planning & Decoration in Kasaragod',
+      },
+      {
+        url: '/images/portfolio/corporate-1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'ADSPOT EVENT - Corporate Event Planning in Kasaragod',
+      },
+      {
+        url: '/images/portfolio/birthday-1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'ADSPOT EVENT - Birthday Party Planning in Kasaragod',
+      },
+      {
+        url: '/images/portfolio/floral-1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'ADSPOT EVENT - Floral Arrangements in Kasaragod',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AdSpot Event | AdSpot | Premium Event Planning & Decoration Services in Kasaragod',
-    description: 'AdSpot Event (AdSpot) is Kasaragod\'s #1 event planning and decoration company. We specialize in weddings, corporate events, birthday celebrations, floral arrangements, and luxury hampers.',
-    images: ['/logo/adspotlogo.jpg'],
+    title: 'ADSPOT EVENT | AdSpot | Premium Event Planning & Decoration Services in Kasaragod',
+    description: 'ADSPOT EVENT (AdSpot) is Kasaragod\'s #1 event planning and decoration company. We specialize in weddings, corporate events, birthday celebrations, floral arrangements, and luxury hampers.',
+    images: [
+      '/images/portfolio/wedding-1.jpg',
+      '/images/portfolio/corporate-1.jpg',
+      '/images/portfolio/birthday-1.jpg',
+      '/images/portfolio/floral-1.jpg'
+    ],
   },
   robots: {
     index: true,
@@ -114,8 +138,32 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo/adspotlogosquare.png" />
-        <link rel="apple-touch-icon" href="/logo/adspotlogosquare.png" />
+        {/* Multiple favicon sizes for better compatibility */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo/adspotlogosquare.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo/adspotlogosquare.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/logo/adspotlogosquare.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/logo/adspotlogosquare.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/logo/adspotlogosquare.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/logo/adspotlogosquare.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/logo/adspotlogosquare.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/logo/adspotlogosquare.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/logo/adspotlogosquare.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/logo/adspotlogosquare.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/logo/adspotlogosquare.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/logo/adspotlogosquare.png" />
+        
+        {/* Microsoft tiles */}
+        <meta name="msapplication-TileColor" content="#f59e0b" />
+        <meta name="msapplication-TileImage" content="/logo/adspotlogosquare.png" />
+        <meta name="msapplication-square70x70logo" content="/logo/adspotlogosquare.png" />
+        <meta name="msapplication-square150x150logo" content="/logo/adspotlogosquare.png" />
+        <meta name="msapplication-wide310x150logo" content="/logo/adspotlogosquare.png" />
+        <meta name="msapplication-square310x310logo" content="/logo/adspotlogosquare.png" />
+        
+        {/* Theme color */}
+        <meta name="theme-color" content="#f59e0b" />
+        
         <link rel="manifest" href="/manifest.json" />
         
         {/* Enhanced Structured Data */}
@@ -125,9 +173,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "AdSpot Event",
-              "alternateName": ["AdSpot", "AdSpot Events", "AdSpot Kasaragod"],
-              "description": "AdSpot Event (AdSpot) is Kasaragod's premier event planning and decoration company specializing in weddings, corporate events, birthday celebrations, floral arrangements, and luxury hampers.",
+              "name": "ADSPOT EVENT",
+              "alternateName": ["ADSPOT EVENT", "AdSpot", "AdSpot Events", "AdSpot Kasaragod"],
+              "description": "ADSPOT EVENT (AdSpot) is Kasaragod's premier event planning and decoration company specializing in weddings, corporate events, birthday celebrations, floral arrangements, and luxury hampers.",
               "url": "https://adspotevent.com",
               "telephone": "+91-7736353636",
               "additionalProperty": [
@@ -176,12 +224,13 @@ export default function RootLayout({
                 "Event Management",
                 "Party Planning"
               ],
-              "logo": "https://adspotevent.com/logo/adspotlogo.jpg",
+              "logo": "https://adspotevent.com/logo/adspotlogosquare.png",
               "image": [
-                "https://adspotevent.com/logo/adspotlogo.jpg",
-                "https://adspotevent.com/images/hero-1.jpg",
-                "https://adspotevent.com/images/hero-2.jpg",
-                "https://adspotevent.com/images/hero-3.jpg"
+                "https://adspotevent.com/logo/adspotlogosquare.png",
+                "https://adspotevent.com/images/portfolio/wedding-1.jpg",
+                "https://adspotevent.com/images/portfolio/corporate-1.jpg",
+                "https://adspotevent.com/images/portfolio/birthday-1.jpg",
+                "https://adspotevent.com/images/portfolio/floral-1.jpg"
               ],
               "sameAs": [
                 "https://www.instagram.com/adspot_event",
@@ -206,10 +255,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "AdSpot Event",
-              "alternateName": ["AdSpot", "AdSpot Events"],
+              "name": "ADSPOT EVENT",
+              "alternateName": ["ADSPOT EVENT", "AdSpot", "AdSpot Events"],
               "url": "https://adspotevent.com",
-              "logo": "https://adspotevent.com/logo/adspotlogo.jpg",
+              "logo": "https://adspotevent.com/logo/adspotlogosquare.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+91-7736353636",
@@ -225,6 +274,54 @@ export default function RootLayout({
               "sameAs": [
                 "https://www.instagram.com/adspot_event",
                 "https://www.facebook.com/adspotevent"
+              ]
+            })
+          }}
+        />
+        
+        {/* Image Gallery Schema for Portfolio */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ImageGallery",
+              "name": "ADSPOT EVENT Portfolio - Event Planning & Decoration in Kasaragod",
+              "description": "ADSPOT EVENT portfolio showcasing wedding planning, corporate events, birthday celebrations, and floral arrangements in Kasaragod, Kerala",
+              "url": "https://adspotevent.com/portfolio",
+              "associatedMedia": [
+                {
+                  "@type": "ImageObject",
+                  "url": "https://adspotevent.com/images/portfolio/wedding-1.jpg",
+                  "name": "ADSPOT EVENT - Wedding Planning & Decoration in Kasaragod",
+                  "description": "Beautiful wedding decoration and planning services by ADSPOT EVENT in Kasaragod",
+                  "width": "1200",
+                  "height": "800"
+                },
+                {
+                  "@type": "ImageObject",
+                  "url": "https://adspotevent.com/images/portfolio/corporate-1.jpg",
+                  "name": "ADSPOT EVENT - Corporate Event Planning in Kasaragod",
+                  "description": "Professional corporate event planning and decoration by ADSPOT EVENT in Kasaragod",
+                  "width": "1200",
+                  "height": "800"
+                },
+                {
+                  "@type": "ImageObject",
+                  "url": "https://adspotevent.com/images/portfolio/birthday-1.jpg",
+                  "name": "ADSPOT EVENT - Birthday Party Planning in Kasaragod",
+                  "description": "Creative birthday party planning and decoration by ADSPOT EVENT in Kasaragod",
+                  "width": "1200",
+                  "height": "800"
+                },
+                {
+                  "@type": "ImageObject",
+                  "url": "https://adspotevent.com/images/portfolio/floral-1.jpg",
+                  "name": "ADSPOT EVENT - Floral Arrangements in Kasaragod",
+                  "description": "Exquisite floral arrangements and decorations by ADSPOT EVENT in Kasaragod",
+                  "width": "1200",
+                  "height": "800"
+                }
               ]
             })
           }}
