@@ -139,7 +139,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Multiple favicon sizes for better compatibility */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" /> 
         <link rel="icon" type="image/png" sizes="16x16" href="/logo/adspotlogosquare.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/logo/adspotlogosquare.png" />
         <link rel="icon" type="image/png" sizes="48x48" href="/logo/adspotlogosquare.png" />
@@ -162,7 +162,7 @@ export default function RootLayout({
         <meta name="msapplication-square310x310logo" content="/logo/adspotlogosquare.png" />
         
         {/* Theme color */}
-        <meta name="theme-color" content="#f59e0b" />
+        <meta name="theme-color" content="##FFCF5C" />
         
         <link rel="manifest" href="/manifest.json" />
         
