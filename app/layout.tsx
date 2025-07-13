@@ -138,33 +138,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Multiple favicon sizes for better compatibility */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" /> 
-        <link rel="icon" type="image/png" sizes="16x16" href="/logo/adspotlogosquare.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/logo/adspotlogosquare.png" />
-        <link rel="icon" type="image/png" sizes="48x48" href="/logo/adspotlogosquare.png" />
+        {/* Favicon configuration */}
+
         <link rel="apple-touch-icon" sizes="180x180" href="/logo/adspotlogosquare.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/logo/adspotlogosquare.png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="/logo/adspotlogosquare.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/logo/adspotlogosquare.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="/logo/adspotlogosquare.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/logo/adspotlogosquare.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="/logo/adspotlogosquare.png" />
-        <link rel="apple-touch-icon" sizes="60x60" href="/logo/adspotlogosquare.png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="/logo/adspotlogosquare.png" />
         
         {/* Microsoft tiles */}
-        <meta name="msapplication-TileColor" content="#f59e0b" />
+        <meta name="msapplication-TileColor" content="#FFC333" />
         <meta name="msapplication-TileImage" content="/logo/adspotlogosquare.png" />
-        <meta name="msapplication-square70x70logo" content="/logo/adspotlogosquare.png" />
-        <meta name="msapplication-square150x150logo" content="/logo/adspotlogosquare.png" />
-        <meta name="msapplication-wide310x150logo" content="/logo/adspotlogosquare.png" />
-        <meta name="msapplication-square310x310logo" content="/logo/adspotlogosquare.png" />
         
         {/* Theme color */}
-        <meta name="theme-color" content="##FFCF5C" />
+        <meta name="theme-color" content="#FFC333" />
         
-        <link rel="manifest" href="/manifest.json" />
+        {/* Web manifest */}
+        <link rel="manifest" href="/site.webmanifest" />
         
         {/* Enhanced Structured Data */}
         <script
